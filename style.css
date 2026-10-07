@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: .3s;
+    background-color: #f5f7fb;
+    color: #222;
+}
+
+header, footer {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a, footer a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+#menuBtn {
+    display: none;
+}
+
+section {
+    padding: 70px 10%;
+    text-align: center;
+}
+#home {
+    background: linear-gradient(135deg, #dbeafe, #ede9fe, #fce7f3);
+    color: #1e293b;
+}
+#about{
+    background-color: white;
+}
+
+#home h1 {
+    font-size: 48px;
+    letter-spacing: 1px;
+}
+
+#home h1 span {
+    color: #7c3aed;
+}
+
+#home h2 {
+    color: #475569;
+    margin: 15px 0;
+}
+
+#home .welcome {
+    color: #7c3aed;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+#home button {
+    margin-top: 10px;
+    background: #7c3aed;
+}
+
+#home button:hover {
+    background: #5b21b6;
+}
+
+body.dark #home {
+    background: linear-gradient(135deg, #111827, #312e81, #4c1d4f);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    #home h1 {
+        font-size: 34px;
+    }
+}
+
+#typing {
+    color: #2563eb;
+}
+
+.skill-group,
+.projects{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+}
+.certificates {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 20px 0;
+    flex-direction: row;
+}
+
+.skill-group h3 {
+    width: 100%;
+    color: #2563eb;
+}
+
+.skill-group p,
+.project,
+.certificates div {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px #ddd;
+}
+
+.project {
+    width: 30%;
+}
+
+.project h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+#projects{
+    text-align: center;
+}
+
+.filter {
+    background: white;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.filter.active {
+    background: #2563eb;
+    color: white;
+}
+
+.github-btn {
+    background: #111827;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    height: 120px;
+}
+
+body.dark {
+    background: #111827;
+    color: white;
+}
+
+body.dark section,
+body.dark #about,
+body.dark #projects,
+body.dark #contact {
+    background: #111827;
+}
+
+body.dark #home {
+    background: #1f2937;
+}
+
+body.dark .skill-group p,
+body.dark .project,
+body.dark .certificates div {
+    background: #374151;
+    color: white;
+}
+
+@media(max-width: 768px) {
+    #menuBtn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        background: #111827;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #home h1 {
+        font-size: 34px;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
+.education-card {
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+    line-height: 2;
+}
+
+body.dark .education-card {
+    background: #374151;
+    color: white;
+}
