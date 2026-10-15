@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "trebuchet MS", sans-serif;
     transition: .3s;
-    background-color: #f5f7fb;
-    color: #222;
+    background-color: #f8fafc;
+    color: #1e293b;
 }
 
 header, footer {
@@ -57,7 +57,7 @@ section {
     color: #1e293b;
 }
 #about{
-    background-color: white;
+    background-color: rgba(249, 248, 245, 0.539);
 }
 
 #home h1 {
@@ -111,8 +111,11 @@ body.dark #home {
     justify-content: center;
     align-items: stretch;
     gap: 25px;
-    flex-wrap: nowrap;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1100px;
 }
 .certificates {
     display: flex;
@@ -121,6 +124,7 @@ body.dark #home {
     gap: 40px;
     margin: 20px 0;
     flex-direction: row;
+    background: linear-gradient(135deg,#fbfafb,#faf9fa);
 }
 .skill-group {
     display: flex;
@@ -147,7 +151,9 @@ body.dark #home {
     box-shadow: 0 3px 10px #ddd;
 }
 
-.project,
+
+
+
 .certificates div {
     background: white;
     padding: 20px;
@@ -155,18 +161,64 @@ body.dark #home {
     box-shadow: 0 3px 10px #ddd;
 }
 
-.project {
-    width: 30%;
-}
-
-.project h3 {
-    color: #2563eb;
-    margin-bottom: 12px;
-}
-#projects{
+#projects {
     text-align: center;
 }
 
+#projects .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    margin: 30px auto;
+    flex-direction: row;
+}
+
+#projects .project {
+    display: block;
+    flex: 0 1 280px;
+    width: 280px;
+    max-width: 100%;
+    padding: 25px;
+    margin: 0;
+    background: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    
+}
+
+#projects .filter {
+    margin: 5px;
+}
+
+#projects .project h3 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+#projects .project p {
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    #projects .projects {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #projects .project {
+        width: 100%;
+        max-width: 320px;
+        flex: none;
+    }
+}
 .filter {
     background: white;
     color: #2563eb;
@@ -253,6 +305,7 @@ body.dark .certificates div {
 
     .project {
         width: 90%;
+        flex: none;
     }
 }
 .education-card {
@@ -268,4 +321,108 @@ body.dark .certificates div {
 body.dark .education-card {
     background: #374151;
     color: white;
+}
+
+body{
+    background: #0b0b18 !important;
+    color: white !important;
+}
+section{
+    background: transparent !important;
+}
+body:not(.light-mode) {
+    color: #f5f3ff !important;
+}
+
+body:not(.light-mode) section,
+body:not(.light-mode) section p,
+body:not(.light-mode) section li,
+body:not(.light-mode) section label {
+    color: #e9e3ff !important;
+}
+
+body:not(.light-mode) section h1,
+body:not(.light-mode) section h2,
+body:not(.light-mode) section h3,
+body:not(.light-mode) section h4 {
+    color: #c4b5fd !important;
+}
+
+body:not(.light-mode) nav a,
+body:not(.light-mode) footer,
+body:not(.light-mode) footer a {
+    color: #f5f3ff !important;
+}
+
+body:not(.light-mode) .project,
+body:not(.light-mode) .skill-group p,
+body:not(.light-mode) .certificates div,
+body:not(.light-mode) .education-card {
+    color: #f5f3ff !important;
+}
+
+body:not(.light-mode) input,
+body:not(.light-mode) textarea {
+    background: #151329 !important;
+    color: #ffffff !important;
+}
+
+body:not(.light-mode) input::placeholder,
+body:not(.light-mode) textarea::placeholder {
+    color: #c4b5fd !important;
+}
+
+body:not(.light-mode) .project,
+body:not(.light-mode) .skill-group p,
+body:not(.light-mode) .certificates div,
+body:not(.light-mode) .education-card {
+    background: #19152e !important;
+    color: #f5f3ff !important;
+    border: 1px solid #6d4bc3 !important;
+}
+
+/* Make card headings visible */
+body:not(.light-mode) .project h3,
+body:not(.light-mode) .skill-group h3,
+body:not(.light-mode) .certificates h3,
+body:not(.light-mode) .education-card h3 {
+    color: #c4b5fd !important;
+}
+
+/* Make card descriptions readable */
+body:not(.light-mode) .project p,
+body:not(.light-mode) .certificates p,
+body:not(.light-mode) .education-card p {
+    color: #e9e3ff !important;
+}
+
+/* Keep links visible */
+body:not(.light-mode) .project a {
+    color: #c4b5fd !important;
+}
+
+body:not(.light-mode) #certificates div,
+body:not(.light-mode) .certificates div,
+body:not(.light-mode) #education .education-card,
+body:not(.light-mode) #education div {
+    background: #19152e !important;
+    color: #f5f3ff !important;
+    border: 1px solid #6d4bc3 !important;
+}
+
+/* Certificate headings and text */
+body:not(.light-mode) #certificates h3,
+body:not(.light-mode) #certificates h4,
+body:not(.light-mode) #certificates p,
+body:not(.light-mode) .certificates h3,
+body:not(.light-mode) .certificates p {
+    color: #e9e3ff !important;
+}
+
+/* Education headings and text */
+body:not(.light-mode) #education h3,
+body:not(.light-mode) #education h4,
+body:not(.light-mode) #education p,
+body:not(.light-mode) #education label {
+    color: #e9e3ff !important;
 }
