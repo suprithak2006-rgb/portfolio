@@ -46,3 +46,20 @@ document.querySelectorAll(".filter").forEach(btn => {
 document.querySelector("#menuBtn").onclick = () => {
     document.querySelector("#navLinks").classList.toggle("show");
 };
+
+const themeBtn = document.getElementById("themeBtn");
+
+if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+        document.body.classList.toggle("light-mode");
+
+        const isLight =
+            document.body.classList.contains("light-mode");
+
+        themeBtn.textContent = isLight ? "🌙" : "☀️";
+        themeBtn.setAttribute(
+            "aria-label",
+            isLight ? "Switch to dark mode" : "Switch to light mode"
+        );
+    });
+}
